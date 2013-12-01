@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <CheckBoxPreference android:key="touch"
+        android:title="@string/enable_touch_title"
+        />
+
+    <EditTextPreference android:key="user"
+        android:title="@string/username_title"
+        android:summary="@string/username_summary"
+        android:defaultValue="nosacky"
+        />
+
+    <EditTextPreference android:key="refresh_interval"
+        android:title="Refresh Interval"
+        android:summary="Time in minutes between refreshing data"
+        android:defaultValue="30"
+        android:numeric="integer"
+        />
+
+</PreferenceScreen>

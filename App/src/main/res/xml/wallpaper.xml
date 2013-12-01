@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<wallpaper xmlns:android="http://schemas.android.com/apk/res/android"
+    android:thumbnail="@drawable/ic_launcher"
+    android:description="@string/app_name"
+    android:settingsActivity="com.osacky.soundcloud.wallpaper.SCPreferencesActivity"
+    >
+
+</wallpaper>
