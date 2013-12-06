@@ -13,7 +13,6 @@ import android.os.AsyncTask;
 import android.os.Handler;
 import android.preference.PreferenceManager;
 import android.service.wallpaper.WallpaperService;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.SurfaceHolder;
 
@@ -49,7 +48,6 @@ public class SCWallpaperService extends WallpaperService {
         private static final String TOUCH_KEY = "touch";
         private static final String USER_KEY = "user";
         private static final String REFRESH_INTERVAL_KEY = "refresh_interval";
-        private static final String TAG = "SCWallpaperEngine";
 
         private final Handler handler = new Handler();
         private final Runnable drawRunner = new Runnable() {
@@ -258,7 +256,7 @@ public class SCWallpaperService extends WallpaperService {
                 }
                 // refresh again later if screen is currently visible (no point in fetching twice while screen is off)
                 if (isVisible()) {
-                    long refreshInterval = TimeUnit.SECONDS.toMillis(refresh_interval);
+                    long refreshInterval = TimeUnit.MINUTES.toMillis(refresh_interval);
                     // make sure there's only one scheduled
                     handler.removeCallbacks(refreshData);
                     handler.postDelayed(refreshData, refreshInterval);
